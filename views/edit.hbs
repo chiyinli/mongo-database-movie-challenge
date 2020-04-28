@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie Page</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  
+    <form action="/edit/{{data._id}}/success?_method=PUT" method="POST">
+        <label for="film_name">Film Name</label>
+        <input type="text" name="film_name" value="{{data.film}}"/>
+
+        <label for="film_actor">Actor</label>
+        <input type="text" name="film_actor" value="{{data.actor}}"/>
+
+        <label for="film_costar">Co-star</label>
+        <input type="text" name="film_costar" value="{{data.costar}}"/>
+
+        <label for="film_description">Description</label>
+        <input type="text" name="film_description" value="{{data.description}}"/>
+
+        <label for="film_year">Film Year of Release</label>
+        <input type="number" name="film_year" value="{{data.year}}"/>
+
+        <label for="film_imdb">Film IMDB Rating</label>
+        <input type="number" name="film_imdb" value="{{data.imdb}}"/>
+
+        <button type="submit">Update Film</button>
+    </form>
+</body>
+</html>

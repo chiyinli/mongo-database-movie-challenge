@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Pages</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    
+    {{#each data}}
+    <div>
+            <h2>Movie Name</h2>
+            <h4>{{this.film}}</h4>
+            <img src="/{{this.film}}.jpg" alt={{this.film}}>
+            <img src="/{{this.film}}.jpeg" alt={{this.film}}>
+            <h2>Actor</h2>
+            <h4>{{this.actor}}</h4>
+            <h2>Co-Star</h2>
+            <h4>{{this.costar}}</h4>
+            <h2>Movie Description</h2>
+            <h4>{{this.description}}</h4>
+            <h2>Movie Year of Release</h2>
+            <h4>{{this.year}}</h4>
+            <h2>IMDB Rating</h2>
+            <h4>{{this.imdb}}</h4>
+            <form action="/edit/{{this._id}}?_method=PUT" method="POST">
+            <button type="submit">Edit Movie</button>
+            </form>
+            <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete Movie</button>
+            </form>
+    </div>
+    {{/each}}
+
+</body>
+</html>
