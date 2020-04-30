@@ -17,8 +17,12 @@ label {
 }
 button {
     color: green;
+    padding: 9px 9px;
 }
 img {
-    padding: 7px, 7px;
+    padding: 9px, 9px;
     color: goldenrod;
+}
+input {
+    padding: 9px 9px;
 }
